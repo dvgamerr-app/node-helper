@@ -1,9 +1,16 @@
 const { expect, assert } = require('chai')
 
-describe('node_debuger', () => {
+describe('node_helper', () => {
   const main = require('../index')
 
-  // describe('#helper()', () => {
+  describe('#formater()', () => {
+    console.log(main.formater('res: {0}'))
+    console.log(main.formater('res: {0}', 'value'))
+    console.log(main.formater('res: {0}', 'value1', 'value2'))
+    console.log(main.formater('res: {name}', { name: 'aaa', age: 18 }))
+    console.log(main.formater('res: {0} {1} {2}', 'value1', 'value2'))
+    console.log(main.formater('res: {name} {cc} {age}', { name: 'aaa', age: 18 }))
+
   //   // it('Functional -- raven', done => {
   //   //   const Raven = require('../helper/raven')
   //   //   Raven.install({}, 'unit-testing')
@@ -38,7 +45,7 @@ describe('node_debuger', () => {
   //   it('const IsWindows', done => {
   //     expect(main).to.have.property('IsWindows')
   //   })
-  // })
+  })
   
 
 })
